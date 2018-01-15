@@ -12,13 +12,13 @@ Simple DB Connector provides a set of classes to connect to databases in a simpl
 
 You must create a class that extends SQLiteConnector.
 
-java```
+```java
 	public class SQLiteDB extends SQLiteConnector
 ```
 
 Now you will have the following methods so that the management of the database
 
-java```
+```java
 	public void connect() throws SQLiteException
 	
 	public void close() throws SQLiteException
