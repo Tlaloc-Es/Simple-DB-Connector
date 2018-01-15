@@ -8,15 +8,38 @@ Simple DB Connector provides a set of classes to connect to databases in a simpl
 # Examples of use
 ## With SQLITE
 
-### Connect to a database that does not exist
+### Creating your own connector
 
-```java
-	SQLITEConnector sql = new SQLITEConnector("/data/a.db");
-  sql.connect();
+You must create a class that extends SQLiteConnector.
+
+java```
+	public class SQLiteDB extends SQLiteConnector
 ```
 
-### Connect to an existing database
-```java
-	SQLITEConnector sql = new SQLITEConnector("/data/a.db");
-  sql.connect();
+Now you will have the following methods so that the management of the database
+
+java```
+	public void connect() throws SQLiteException
+	
+	public void close() throws SQLiteException
+
+	public void onSetVersioned()
+
+	public void onCreate()
+
+	public void onUpgrade(int oldVersion, int newVersion)
 ```
+
+#### connect()
+Attempts to establish a connection to the given database URL.
+
+#### close()
+
+#### onCreate()
+Add functionality when you create a database
+
+#### onSetVersioned()
+Add a functionality when you start a version in the database
+
+#### onUpgrade(int oldVersion, int newVersion)
+Add a functionality when you update the version

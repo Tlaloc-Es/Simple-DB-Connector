@@ -1,6 +1,6 @@
-package com.tlaloc_es.simple_db_connector.sqlite;
+package com.tlaloc_es.simple_db_connector.sqlite.exceptions;
 /**
- *\brief Definicion de la clase
+ * Generic exception for Simple DB Connector
  */
 public class SQLiteException extends Exception{
 	public SQLiteException(String msg){
