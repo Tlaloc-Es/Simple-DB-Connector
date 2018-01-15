@@ -30,19 +30,26 @@ Now you will have the following methods so that the management of the database
 	public void onUpgrade(int oldVersion, int newVersion)
 ```
 
-#### connect()
-Attempts to establish a connection to the given database URL.
+### Creating a SQLiteConnector object
 
-#### close()
+#### Without Version
+```java
+   DB sql = new DB("/user/data.db");
+```
 
-#### onCreate()
-Add functionality when you create a database
+#### Without Version
+```java
+   DB sql = new DB("/user/data.db",1);
+```
 
-#### onSetVersioned()
-Add a functionality when you start a version in the database
-
-#### onUpgrade(int oldVersion, int newVersion)
-Add a functionality when you update the version
+#### Execute query
+```java
+String sqlQuery = "select * from 'users' where id = ?";
+PreparedStatement ps = sql.prepareStatement(sqlQuery);
+ps.setInt(1, 1);
+sql.executeQuery(ps);
+sql.close();
+```
 
 # Add Simple DB Connector to your project
 ## With Maven
