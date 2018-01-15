@@ -43,3 +43,16 @@ Add a functionality when you start a version in the database
 
 #### onUpgrade(int oldVersion, int newVersion)
 Add a functionality when you update the version
+
+# Add Simple API to your project
+## With Maven
+```
+<groupId>com.tlaloc-es</groupId>
+<artifactId>simple-db-connector</artifactId>
+<version>0.0.1</version>
+```
+
+## With Gradlew
+```
+compile 'com.tlaloc-es:simple-db-connector:0.0.1'
+```
