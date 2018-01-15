@@ -44,7 +44,7 @@ Add a functionality when you start a version in the database
 #### onUpgrade(int oldVersion, int newVersion)
 Add a functionality when you update the version
 
-# Add Simple API to your project
+# Add Simple DB Connector to your project
 ## With Maven
 ```
 <groupId>com.tlaloc-es</groupId>
